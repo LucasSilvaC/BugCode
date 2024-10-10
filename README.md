@@ -21,6 +21,4 @@ Programming can be fun! With BugCode you can learn programming in just 5 minutes
 &nbsp;
 
 ## 📊 &nbsp;Status
-[![LucasSilvaC GitHub stats](https://github-readme-stats.vercel.app/api?username=LucasSilvaC&hide=contribs,prs&show_icons=true&bg_color=0d1116&title_color=ce09ec&text_color=a4aacb&icon_color=007ec6)](https://github.com/LucasSilvaC/github-readme-stats)
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=LucasSilvaC&theme=dark&count_private=true&bg_color=0d1116&title_color=ce09ec&text_color=a4aacb&icon_color=007ec6)
+52%  Loading...
