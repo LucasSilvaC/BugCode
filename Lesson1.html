@@ -8,14 +8,16 @@
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/Lesson.css">
     <link href="Font.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
 </head>
 
 <body>
     <!-- Vidas -->
     <div id="lives-container" style="position: absolute; top: 10px; left: 10px; display: flex; align-items: center;">
         <img id="heart-icon" src="img/coracao.png" alt="Coração" style="width: 30px; height: 30px;">
-        <span id="lives-count" style="font-size: 24px; margin-left: 5px;">3</span>
+        <span id="lives-count" style="font-size: 24px; margin-left: 5px; font-family: 'Minecraft', sans-serif;">3</span>
     </div>
+
     <!-- Container intro 1 -->
     <div class="intro-container">
         <h1>Bem-vindo à primeira atividade do módulo 1 de Javascript!</h1>
@@ -27,7 +29,8 @@
     <div class="container" style="display: none;">
         <div class="info-box" id="info1">
             <h2>Introdução ao JavaScript</h2>
-            <p>O JavaScript é uma linguagem de programação leve que os desenvolvedores usam para criar relações mais dinâmicas.</p>
+            <p>O JavaScript é uma linguagem de programação leve que os desenvolvedores usam para criar relações mais
+                dinâmicas.</p>
             <button onclick="showInfo(2)">Próxima</button>
         </div>
 
@@ -44,41 +47,42 @@
             <div id="progress" class="progress"></div>
         </div>
 
-        <!-- Questão 1 -->
+        <!-- Questões -->
         <div class="question" id="question1" style="display: none;">
             <h1>Qual das seguintes opções é uma característica do JavaScript?</h1>
             <div class="options">
-                <label onclick="selectOption(1, 'a')" class="option">É uma linguagem de tipagem estática.</label>
-                <label onclick="selectOption(1, 'b')" class="option">É uma linguagem de programação leve com vários meios de uso.</label>
-                <label onclick="selectOption(1, 'c')" class="option">É executada apenas no servidor.</label>
-                <label onclick="selectOption(1, 'd')" class="option">É uma para responder eventos na web.</label>
+                <label onclick="selectOption(1, 'A')" class="option">A. É uma linguagem de tipagem estática.</label>
+                <label onclick="selectOption(1, 'B')" class="option">B. É uma linguagem de programação leve com vários
+                    meios de uso.</label>
+                <label onclick="selectOption(1, 'C')" class="option">C. É executada apenas no servidor.</label>
+                <label onclick="selectOption(1, 'D')" class="option">D. É uma para responder eventos na web.</label>
             </div>
-            <button onclick="nextQuestion(1)">Próxima</button>
+            <button onclick="nextQuestion(1)">Responder</button>
             <button onclick="skipQuestion(1)">Pular</button>
             <button onclick="showHint('JavaScript é muito usado para interatividade em vários dispositivos.')" class="help-button">Ajuda</button>
         </div>
 
-        <!-- Questão 2 -->
         <div class="question" id="question2" style="display: none;">
             <h1>Qual é a função principal do JavaScript em uma página web?</h1>
             <div class="options">
-                <label onclick="selectOption(2, 'a')" class="option">Formatar o estilo da página.</label>
-                <label onclick="selectOption(2, 'b')" class="option">Manipular e responder a eventos.</label>
-                <label onclick="selectOption(2, 'c')" class="option">Armazenar dados no servidor.</label>
-                <label onclick="selectOption(2, 'd')" class="option">Carregar imagens.</label>
+                <label onclick="selectOption(2, 'A')" class="option">A. Formatar o estilo da página.</label>
+                <label onclick="selectOption(2, 'B')" class="option">B. Manipular e responder a eventos.</label>
+                <label onclick="selectOption(2, 'C')" class="option">C. Armazenar dados no servidor.</label>
+                <label onclick="selectOption(2, 'D')" class="option">D. Carregar imagens.</label>
             </div>
             <button onclick="prevQuestion(2)">Voltar</button>
-            <button onclick="nextQuestion(2)">Próxima</button>
+            <button onclick="nextQuestion(2)">Responder</button>
             <button onclick="skipQuestion(2)">Pular</button>
             <button onclick="showHint('Pense em como as páginas respondem ao que o usuário faz.')" class="help-button">Ajuda</button>
         </div>
 
-        <!-- Questão 3 -->
         <div class="question" id="question3" style="display: none;">
-            <h1>Complete a frase: "JavaScript é utilizado para responder a eventos do usuário e criar ______________ nas páginas web"?</h1>
+            <h1>Complete a frase: "JavaScript é utilizado para responder a eventos do usuário e criar ______________ nas
+                páginas web"?</h1>
             <input type="text" id="answer3" placeholder="Digite sua resposta" class="styled-input">
             <button onclick="prevQuestion(3)">Voltar</button>
-            <button onclick="submitQuiz()">Enviar</button>
+            <button onclick="submitQuiz()">Responder</button>
+            <button onclick="skipQuestion(3)">Pular</button>
             <button onclick="showHint('Lembre-se do que você aprendeu sobre interatividade.')" class="help-button">Ajuda</button>
         </div>
     </div>
@@ -86,12 +90,21 @@
     <!-- Alertas -->
     <div id="customAlert" class="alert-box" style="display: none;">
         <div class="alert-content">
-            <span id="alertText"></span>
+            <span id="alertText"></span><br>
             <button onclick="closeAlert()">OK</button>
         </div>
     </div>
 
-    <!-- Scripts -->
-<script src="js/lesson.js" defer></script>
+    <!-- Tela final -->
+    <div id="result-container" style="display: none;" class="result-container">
+        <h2 class="result-title">Resultados</h2>
+        <p class="score-display" id="result-summary"></p>
+        <button class="restart-button" id="restart-button" onclick="restartQuiz()">Recomeçar</button>
+        <button id="finish-button" style="display: none;" onclick="finishQuiz()">Finalizar</button>
+    </div>
+
+    <!-- Audios -->
+    <audio id="correct-sound" src="audio/Correct_Sound.mp3" preload="auto"></audio>
+    <script src="js/lesson.js"></script>
 </body>
 </html>
