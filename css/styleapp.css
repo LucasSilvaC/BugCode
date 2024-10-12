@@ -8,7 +8,7 @@
 
 body,
 input {
-  font-family: "Poppins", sans-serif;
+  font-family: "DIN Next Rounded LT W01 Regular";
 }
 
 .container {
@@ -64,6 +64,7 @@ form.sign-in-form {
   font-size: 2.2rem;
   color: #444;
   margin-bottom: 10px;
+  font: 700 1.375rem/1.75rem "Feather bold", sans-serif;
 }
 
 .input-field {
@@ -183,7 +184,7 @@ form.sign-in-form {
 }
 
 .panel p {
-  font-size: 0.95rem;
+  font-size: 1.4rem;
   padding: 0.7rem 0;
 }
 

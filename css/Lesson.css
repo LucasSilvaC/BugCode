@@ -16,10 +16,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     height: 500px;
     position: relative;
     margin: 0 auto;
+    text-align: center;
 }
 
 .progress-bar {
@@ -36,9 +37,11 @@ body {
     border-radius: 8px;
     transition: width 0.3s;
 }
+
 /* Introdução */
 h1 {
     margin-top: 30px;
+    text-align: center;
 }
 
 .intro-container {
@@ -59,7 +62,7 @@ h1 {
 
 .intro-container p {
     font-size: 22px;
-   margin-top: 30px;
+    margin-top: 30px;
 }
 
 .intro-container button {
@@ -110,8 +113,8 @@ video {
 .info-box p{
     font-size: 18px;
 }
-/* Questões */
 
+/* Questões */
 .question {
     margin-bottom: 20px;
 }
@@ -123,84 +126,25 @@ video {
 .option {
     display: block;
     padding: 15px;
-    border: 2px solid #bec1c4;
+    border: 2px solid #9370DB;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin: 10px 0;
     cursor: pointer;
-    font-size: 16px;
-    position: relative;
-    background-color: #f8f9fa;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.option input {
-    position: absolute;
-    opacity: 0;
+    transition: background-color 0.3s, transform 0.2s; 
 }
 
 .option:hover {
-    background-color: #e9ecef;
+    background-color: #d5e2f2;
+    transform: scale(1.02); 
 }
 
-.option input:checked + span {
-    font-weight: bold;
-    color: #9370DB;
-}
-
-.selected {
-    background-color: #d0e0ff;
-    border-color: #9370DB;
-    color: #9370DB;
-}
-
-.alert-box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 2px solid #9370DB;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: none;
-    z-index: 1000;
-    border-radius: 8px;
-}
-
-.alert-content {
-    text-align: center;
-}
-
-.alert-content button {
+.option.selected {
+    border-color: #bec1c4;
     background-color: #9370DB;
     color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 10px;
 }
 
-.alert-content button:hover {
-    border: 2px solid #9370DB;
-    padding: 10px 20px;
-    background-color: white;
-}
-
-.alert-box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 2px solid #9370DB;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    display: none;
-    width: 300px;
-}
-
+/* Botões da pergunta */
 button {
     background-color: #9370DB;
     border: none;
@@ -211,6 +155,9 @@ button {
     cursor: pointer;
     margin: 5px;
     font-family: "DIN Next Rounded LT W01 Regular";
+    margin-right: 20px;
+    width: 40%;
+    font-weight: bold;
 }
 
 button:hover {
@@ -220,46 +167,135 @@ button:hover {
     padding: 20px 40px;
     font-size: 18px;
     color: #9370DB;
-    font-family: "DIN Next Rounded LT W01 Regular";
+}
+
+/* Estilo de Ajuda */
+.help-button {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.help-button:hover{
+    color: #f0ad4e;
+    border: 2px solid #f0ad4e;
+}
+
+/* Caixa de alerta personalizada */
+.alert-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-size: 25px;
+}
+
+.alert-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.alert-content button{
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.alert-content button:hover{
+    background-color: white;
+    color: #f0ad4e;
+    border: 2px solid #f0ad4e;
 }
 
 .styled-input {
-    width: 90%;
-    padding: 15px;
-    border: 2px solid #bec1c4;
-    border-radius: 8px;
-    font-size: 16px;
-    margin-top: 20px;
-    transition: border-color 0.3s;
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
 }
 
 .styled-input:focus {
     border-color: #9370DB;
-    outline: none;
-    box-shadow: 0 0 5px rgba(147, 112, 219, 0.5);
+}
+
+/* Tela final */
+#result-container {
+    display: none;
+}
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 80%; 
+    max-width: 500px;
+    text-align: center;
+}
+
+.result-title {
+    font-size: 2em; 
+    margin-bottom: 10px; 
+    color: #333;
+}
+
+.result-summary {
+    font-size: 1.2em; 
+    margin-bottom: 20px; 
+    color: #555; 
+    text-align: center; 
 }
 
 /* Responsividade */
-@media (max-width:480px) {
+@media (max-width: 480px) {
     .container {
         height: auto;
+        padding-top: 0px; 
     }
+
+    #lives-container {
+        position: absolute; 
+        top: 10px; 
+        left: 10px; 
+        z-index: 2000; 
+        display: flex; 
+        align-items: center; 
+    }
+
+    .progress-bar {
+        background-color: #e9ecef;
+        border-radius: 8px;
+        height: 10px;
+        margin-top: 80px; 
+        margin-bottom: 20px; 
+    }
+
     button {
-        background-color: #9370DB;
-        border: none;
-        border-radius: 4px;
-        color: #fff;
-        padding: 12px 32px;
+        padding: 12px 32px; 
         font-size: 18px;
-        cursor: pointer;
         margin: 5px;
-        display: inline-block;
-        font-family: "DIN Next Rounded LT W01 Regular";
     }
+
     button:hover {
-        background-color: #ffffff;
-        border: 2px solid #9370DB;
-        font-weight: bold;
-        padding: 14px 34px;
+        padding: 14px 33px; 
+    }
+
+    .progress {
+        background-color: #9370DB;
+        height: 100%;
+        width: 0;
+        border-radius: 8px;
+        transition: width 0.3s;
     }
 }
