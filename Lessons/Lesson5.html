@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugCode</title>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/Lesson.css">
+    <link href="../Font.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+</head>
+
+<body>
+    <!--Home -->
+    <div class="container-home">
+        <a href="../menu.html"><img src="../img/logo.png" /></a>
+    </div>
+
+    <!-- Vidas -->
+    <div id="lives-container" style="position: absolute; top: 10px; left: 10px; display: flex; align-items: center;">
+        <img id="heart-icon" src="../img/coracao.png" alt="Coração" style="width: 30px; height: 30px;">
+        <span id="lives-count" style="font-size: 24px; margin-left: 5px; font-family: 'Minecraft', sans-serif;color:black;">3</span>
+    </div>
+
+    <!-- Container intro 1 -->
+    <div class="intro-container">
+        <h1>Bem-vindo à quinta atividade do módulo 1 de Javascript!</h1>
+        <p>Vamos aprender juntos!</p>
+        <button onclick="startQuiz()">Começar</button>
+    </div>
+
+    <!-- Container de informações -->
+    <div class="container" style="display: none;">
+        <div class="info-box" id="info1">
+            <h2>Principais Operações Numéricas</h2>
+            <p>JavaScript oferece uma série de operadores para realizar cálculos matemáticos simples, como adição (+), subtração (-), multiplicação (*), e divisão (/). Esses operadores podem ser usados em variáveis ou diretamente com números, e ajudam a resolver cálculos de maneira rápida e eficiente.</p>
+            <button onclick="showInfo(2)">Próxima</button>
+        </div>
+
+        <div class="info-box" id="info2" style="display: none;">
+            <h2>Operadores de Incremento e Decremento</h2>
+            <p>O incremento (++) e o decremento (--) são operadores especiais que aumentam ou diminuem o valor de uma variável em 1. Quando usados antes (++x ou --x), a variável é incrementada ou decrementada antes da avaliação da expressão quando usados depois (x++ ou x--), a variável é modificada após a avaliação.</p>
+            <button onclick="showInfo(3)">Próxima</button>
+        </div>
+
+        <div class="info-box" id="info3" style="display: none;">
+            <h2>Operador de Módulo</h2>
+            <p> O operador de módulo (%) retorna o resto de uma divisão entre dois números. É especialmente útil para verificar se um número é par ou ímpar ou para dividir valores em partes exatas.</p>
+            <div class="terminal">
+                <div class="header">
+                  <span class="circle red"></span>
+                  <span class="circle yellow"></span>
+                  <span class="circle green"></span>
+                  <span class="title">Script.js</span>
+                </div>
+                <div class="content">
+                  <p>// Incremento <br> console.log(x++);</p>
+                  <p>// Subtração <br> console.log(a - b);</p>
+                  <p>// Divisão com resto <br> console.log(y % 3);</p>
+                </div>
+              </div>
+            <button onclick="showInfo(4)">Próxima</button>
+        </div>
+
+        <div class="info-box" id="info4" style="display: none;">
+            <h2>Prioridade de Operadores em Expressões Numéricas</h2>
+            <p>Em JavaScript, assim como na matemática, a ordem em que as operações são realizadas é importante. A linguagem segue a precedência
+                padrão dos operadores para determinar a ordem das operações em expressões mais complexas. Isso significa que multiplicação (*),
+                divisão (/), e módulo (%) têm prioridade sobre adição (+) e subtração (-). No entanto, você pode usar parênteses para controlar
+                explicitamente a ordem de execução das operações e garantir que partes específicas da expressão sejam resolvidas primeiro.</p>
+            <button onclick="showQuestion(1)">Próximo</button>
+        </div>
+
+        <!-- Barra de progresso -->
+        <div class="progress-bar" id="progress-bar" style="display: none;">
+            <div id="progress" class="progress"></div>
+        </div>
+
+        <!-- Questões -->
+        <div class="question" id="question1" style="display: none;">
+            <h1>Qual operador em JavaScript é usado para obter o resto de uma divisão?</h1>
+            <div class="options">
+                <label onclick="selectOption(1, 'A')" class="option">A. +</label>
+                <label onclick="selectOption(1, 'B')" class="option">B. %</label>
+                <label onclick="selectOption(1, 'C')" class="option">C. /</label>
+                <label onclick="selectOption(1, 'D')" class="option">D. *</label>
+            </div>
+            <button onclick="nextQuestion()">Responder</button>
+            <button onclick="skipQuestion()">Pular</button>
+            <button onclick="showHint('.')" class="help-button">Ajuda</button>
+        </div>
+
+        <div class="question" id="question2" style="display: none;">
+            <h1>Quais são os tipos de dados que uma variável em JavaScript pode armazenar?</h1>
+            <div class="options">
+                <label onclick="selectOption(2, 'A')" class="option">A. Números, strings, booleanos, arrays e objetos.</label>
+                <label onclick="selectOption(2, 'B')" class="option">B. Apenas números.</label>
+                <label onclick="selectOption(2, 'C')" class="option">C. Nenhum destes.</label>
+                <label onclick="selectOption(2, 'D')" class="option">D. Apenas textos.</label>
+            </div>
+            <button onclick="nextQuestion()">Responder</button>
+            <button onclick="skipQuestion()">Pular</button>
+            <button onclick="prevQuestion(1)">Voltar</button>
+            <button onclick="showHint('Pense no terminal e todas as suas possibilidades de variáveis')" class="help-button">Ajuda</button>
+        </div>
+
+        <div class="question" id="question3" style="display: none;">
+            <h1>Qual é a diferença de escopo entre var e let/const?</h1>
+            <div class="options">
+                <label onclick="selectOption(3, 'A')" class="option">A. var tem escopo de bloco, enquanto let e const têm escopo global.</label>
+                <label onclick="selectOption(3, 'B')" class="option">B. var tem escopo global ou de função, enquanto let e const têm escopo de bloco.</label>
+                <label onclick="selectOption(3, 'C')" class="option">C. Não há diferença de escopo entre eles.</label>
+                <label onclick="selectOption(3, 'D')" class="option">D. let e const não podem ser usados fora de funções.</label>
+            </div>
+            <button onclick="nextQuestion()">Responder</button>
+            <button onclick="skipQuestion()">Pular</button>
+            <button onclick="prevQuestion(2)">Voltar</button>
+            <button onclick="showHint('Lembre-se da Variável que é diferente das suas irmãs.')" class="help-button">Ajuda</button>
+        </div>
+
+        <div class="question" id="question4" style="display: none;">
+            <h1>Qual é nome da variável que tem uso global no código?</h1>
+            <input type="text" id="answer4" placeholder="Digite sua resposta" class="styled-input">
+            <button onclick="submitQuiz()">Responder</button>
+            <button onclick="skipQuestion()">Pular</button>
+            <button onclick="prevQuestion(3)">Voltar</button>
+            <button onclick="showHint('Lembre-se do exercício anterior.')" class="help-button">Ajuda</button>
+        </div>
+    </div>
+
+    <!-- Alertas -->
+    <div id="customAlert" class="alert-box" style="display: none;">
+        <div class="alert-content">
+            <span id="alertText"></span><br>
+            <button onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
+    <!-- Tela final -->
+    <div id="result-container" style="display: none;" class="result-container">
+        <h2 class="result-title">Resultados</h2>
+        <p class="score-display" id="result-summary"></p>
+        <button class="restart-button" id="restart-button" onclick="restartQuiz()">Recomeçar</button>
+        <a href="../menu.html"><button id="finish-button" style="display: none;" onclick="finishQuiz()">Finalizar</button></a>
+    </div>
+
+    <!-- GIF de celebração -->
+    <div id="celebration-gif" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;">
+        <img src="../img/congratulations.gif" alt="Celebração" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+
+    <!-- Áudios -->
+    <audio id="correct-sound" src="../audio/Correct_Sound.mp3" preload="auto"></audio>
+    <audio id="incorrect-sound" src="../audio/Incorrect_sound.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="../audio/Test_win.mp3" preload="auto"></audio>
+    <audio id="fail-sound" src="../audio/Test_fail.mp3" preload="auto"></audio>
+
+
+    <script src="../js_lessons/lesson5.js"></script>
+     <!-- Modal -->
+    <div id="meuModal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="fecharModal()">&times;</span>
+          <p id="significadoTexto"></p>
+      </div>
+  </div>
+</body>
+</html>

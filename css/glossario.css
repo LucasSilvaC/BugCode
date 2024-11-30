@@ -1,0 +1,88 @@
+/* Header */
+.h1 {
+    color: rgb(255, 255, 255);
+    font: 600 2.5rem/3.125rem "Open Sans", sans-serif;
+    text-align: center;
+}
+
+/* Glossário */
+.table-container {
+    width: 90%;
+    max-width: 800px;
+    overflow-x: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.styled-table thead tr {
+    background-color: #9370DB;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+.styled-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #9370DB;
+}
+
+.link-style {
+    color: #9370DB; 
+    text-decoration: none; 
+}
+
+.link-style:hover {
+    text-decoration: underline;  
+}
+
+/* Copyright */
+.copyright1 {
+    margin-top: 250px;
+    text-align: center;
+}
+
+.copyright1 .p-small {
+    padding-top: 1.375rem;
+    border-top: 1px solid #9370DB;
+    color: #000000;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 430px) {
+    header {
+        margin-top: 10%;
+    }
+}

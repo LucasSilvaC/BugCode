@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Css -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="Font.css" rel="stylesheet">
+    <link href="css/Switch.css" rel="stylesheet">
+    <link href="css/MobilePopup.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
+
+    <!-- Design -->
+    <title>BugCode</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Carregamento -->
+    <div class="loading-ball">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand logo-image" href="index.html"><img src="img/menu_icon.png"></a>
+
+            <!-- Mobile Menu -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="img/threebars.png" class="sos">
+            </button>
+
+            <!-- Header -->
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="index.html">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="menu.html">APRENDER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="glossario.html">GLOSSÁRIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="">PERFIL</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="folder" onclick="toggleTable('table1')">Módulo 1</div>
+                <div class="folder" onclick="toggleTable('table2')">Módulo 2</div>
+                <div class="folder" onclick="toggleTable('table3')">Módulo 3</div>
+                <div id="table1" class="table-container">
+                    <!-- Tabela módulos -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Número</th>
+                                <th>Nome</th>
+                                <th>Descrição</th>
+                                <th>Dificuldade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lição I</td>
+                                <td>Introdução ao Javascript</td>
+                                <td>Introdução a características do Javascript</td>
+                                <td>1/5</td>
+                                    <td class="content-extra">Quer começar a lição?<a href="Lessons/Lesson1.html"><div class="seta-1"><i></i></div>
+                                    </td>
+                                </a>
+                            </tr>
+                            <tr>
+                                <td>Lição II</td>
+                                <td>Comentários</td>
+                                <td>Utilização de comentários e cleancode</td>
+                                <td>1/5</td>
+                                <td class="content-extra">Quer começar a lição?<a href="Lessons/Lesson2.html"><div class="seta-1"><i></i></div>
+                                </td>
+                            </a>
+                            </tr>
+                            <tr>
+                                <td>Lição III</td>
+                                <td>Alertas</td>
+                                <td>Alertas e avisos</td>
+                                <td>1/5</td>
+                                <td class="content-extra">Quer começar a lição?<a href="Lessons/Lesson3.html"><div class="seta-1"><i></i></div>
+                                </td>
+                            </a>
+                            </tr>
+                            <tr>
+                                <td>Revisão I</td>
+                                <td>Alertas e comentários</td>
+                                <td>Revisão dos contéudos vistos até aqui</td>
+                                <td>2/5</td>
+                                <td class="content-extra">Quer começar a lição?<a href="Lessons/Revisão1.html"><div class="seta-1"><i></i></div>
+                                </td>
+                            </a>
+                            </tr>
+                            <tr>
+                                <td>Lição IV</td>
+                                <td>Variáveis</td>
+                                <td>Criação e utilização de variáveis</td>
+                                <td>2/5</td>
+                                <td class="content-extra">Quer começar a lição?<a href="Lessons/Lesson4.html"><div class="seta-1"><i></i></div>
+                                </td>
+                            </a>
+                            </tr>
+                            <tr>
+                                <td>Lição V</td>
+                                <td>Contas númericas</td>
+                                <td>Cálculos básicos em Javascript</td>
+                                <td>3/5</td>
+                                <td class="content-extra">Quer começar a lição?<a href="Lessons/Lesson5.html"><div class="seta-1"><i></i></div>
+                                </td>
+                            </a>
+                            </tr>
+                            <tr>
+                                <td>Lição VI</td>
+                                <td>If e Else</td>
+                                <td>Condicionais</td>
+                                <td>4/5</td>
+                                <td class="content-extra">Quer começar a lição?<a href="Lessons/Lesson6.html"><div class="seta-1"><i></i></div>
+                                </td>
+                            </a>
+                            </tr>
+                            <tr>
+                                <td>Revisão II</td>
+                                <td>If e Else e variáveis</td>
+                                <td>Revisão dos contéudos vistos até aqui</td>
+                                <td>4/5</td>
+                                <td class="content-extra">Quer começar a lição?<a href="Lessons/Revisão2.html"><div class="seta-1"><i></i></div>
+                                </td>
+                            </a>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="table2" class="table-container">
+                    <p>Em breve conteúdo do Módulo 2</p>
+                </div>
+
+                <div id="table3" class="table-container">
+                    <p>Em breve conteúdo do Módulo 3</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Style -->
+    <svg class="header-frame" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+        viewBox="0 0 1920 310">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: #9370DB;
+                }
+            </style>
+        </defs>
+        <title>header-frame</title>
+        <path class="cls-1"
+            d="M0,283.054c22.75,12.98,53.1,15.2,70.635,14.808,92.115-2.077,238.3-79.9,354.895-79.938,59.97-.019,106.17,18.059,141.58,34,47.778,21.511,47.778,21.511,90,38.938,28.418,11.731,85.344,26.169,152.992,17.971,68.127-8.255,115.933-34.963,166.492-67.393,37.467-24.032,148.6-112.008,171.753-127.963,27.951-19.26,87.771-81.155,180.71-89.341,72.016-6.343,105.479,12.388,157.434,35.467,69.73,30.976,168.93,92.28,256.514,89.405,100.992-3.315,140.276-41.7,177-64.9V0.24H0V283.054Z" />
+    </svg>
+    
+    <!-- Copyright -->
+    <div class="copyright1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">© 2024 BugCode, Inc. Todos os direitos e associados são de marca registrada da
+                        BugCode,Inc.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleTable(tableId, folderId) {
+            var tables = document.querySelectorAll('.table-container');
+            tables.forEach(function (table) {
+                if (table.id === tableId) {
+                    table.style.display = table.style.display === 'none' ? 'block' : 'none';
+                } else {
+                    table.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

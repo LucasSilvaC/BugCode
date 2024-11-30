@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugCode</title>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/Lesson.css">
+    <link href="../Font.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+</head>
+
+<body>
+    <!--Home -->
+    <div class="container-home">
+        <a href="../menu.html"><img src="../img/logo.png" /></a>
+    </div>
+
+    <!-- Vidas -->
+    <div id="lives-container" style="position: absolute; top: 10px; left: 10px; display: flex; align-items: center;">
+        <img id="heart-icon" src="../img/coracao.png" alt="Coração" style="width: 30px; height: 30px;">
+        <span id="lives-count" style="font-size: 24px; margin-left: 5px; font-family: 'Minecraft', sans-serif;color:black;">3</span>
+    </div>
+
+    <!-- Container intro 1 -->
+    <div class="intro-container">
+        <h1>Bem-vindo à terceira atividade do módulo 1 de Javascript!</h1>
+        <p>Vamos aprender juntos!</p>
+        <button onclick="startQuiz()">Começar</button>
+    </div>
+
+    <!-- Container de informações -->
+    <div class="container" style="display: none;">
+        <div class="info-box" id="info1">
+            <h2>Alertas e avisos</h2>
+            <p>Alertas são recursos muito utilizados em  <span onclick="mostrarSignificado(this)">JS</span>  <data data-significado="JS e Script são sinônimos e variações da palavra 'Javascript'"></data>
+            porque com ele é possível criar caixas de diálogos que aparecem na tela do usuário.</p>
+            <button onclick="showInfo(2)">Próxima</button>
+        </div>
+
+        <div class="info-box" id="info2" style="display: none;">
+            <h2>Como fazer um alerta?</h2>
+            <p>Utilizando uma única linha de código é possível criar um alerta, veja e tente você mesmo. Digite o que quiser.</p>
+            <div class="terminal">
+                <div class="header">
+                  <span class="circle red"></span>
+                  <span class="circle yellow"></span>
+                  <span class="circle green"></span>
+                  <span class="title">Script.js</span>
+                </div>
+                <div class="content">
+                  <p>alert("Olá, mundo!");</p>
+                </div>
+              </div>
+            <input type="text" id="answer_alert" placeholder="Escreva o código" class="styled-input">
+            <button onclick="showInfo(3)">Próxima</button>
+            <button onclick="exibirAlerta()">Exibir</button>
+        </div>
+
+        <div class="info-box" id="info3" style="display: none;">
+            <h2>Experiência do usuário</h2>
+            <p>A função de alerta para o código inteiro quando é requisitada, além de ter um design básico, preferencialmente é recomendado para necessidades críticas, pelo seu grau de importância, por mais que possa vir a ser usado de qualquer forma.</p>
+            <button onclick="showInfo(4)">Próxima</button>
+        </div>
+
+        <div class="info-box" id="info4" style="display: none;">
+            <h2>Alternativas ao uso de alertas</h2>
+            <p>Atualmente existem diversas alternativas para os alertas, até pensando em dispositivos móveis, utilizar caixas controladas em CSS pode ser uma boa alternativa. Mas não pode ser descartado o uso do Alerta, que é simples e ótimo para mensagens importantes.</p>
+            <button onclick="showQuestion(1)">Próximo</button>
+        </div>
+
+        <!-- Barra de progresso -->
+        <div class="progress-bar" id="progress-bar" style="display: none;">
+            <div id="progress" class="progress"></div>
+        </div>
+
+        <!-- Questões -->
+        <div class="question" id="question1" style="display: none;">
+            <h1>Qual das alternativas abaixo é a função JavaScript utilizada para exibir uma mensagem em uma janela pop-up?</h1>
+            <div class="options">
+                <label onclick="selectOption(1, 'A')" class="option">A. Console.log()</label>
+                <label onclick="selectOption(1, 'B')" class="option">B. Prompt()</label>
+                <label onclick="selectOption(1, 'C')" class="option">C. Alert()</label>
+                <label onclick="selectOption(1, 'D')" class="option">D. Confirm()</label>
+            </div>
+            <button onclick="nextQuestion()">Responder</button>
+            <button onclick="skipQuestion()">Pular</button>
+            <button onclick="showHint('Lembre-se do comando para executar os alertas')" class="help-button">Ajuda</button>
+        </div>
+
+        <div class="question" id="question2" style="display: none;">
+            <h1>Em que situação o uso de alert() pode ser inconveniente para o usuário?</h1>
+            <div class="options">
+                <label onclick="selectOption(2, 'A')" class="option">A. Quando é usada para mensagens que não bloqueiam a página.</label>
+                <label onclick="selectOption(2, 'B')" class="option">B. Quando é usada repetidamente sem necessidade.</label>
+                <label onclick="selectOption(2, 'C')" class="option">C. Quando é usada para mensagens de teste em produção.</label>
+                <label onclick="selectOption(2, 'D')" class="option">D. B e C estão corretas.</label>
+            </div>
+            <button onclick="nextQuestion()">Responder</button>
+            <button onclick="skipQuestion()">Pular</button>
+            <button onclick="prevQuestion(1)">Voltar</button>
+            <button onclick="showHint('Pense na experiência do usuário')" class="help-button">Ajuda</button>
+        </div>
+
+        <div class="question" id="question3" style="display: none;">
+            <h1>Qual é o objetivo principal da função alert() no JavaScript?</h1>
+            <div class="options">
+                <label onclick="selectOption(3, 'A')" class="option">A. Solicitar uma resposta do usuário.</label>
+                <label onclick="selectOption(3, 'B')" class="option">B. Registrar uma mensagem no console.</label>
+                <label onclick="selectOption(3, 'C')" class="option">C. Exibir uma mensagem que bloqueia a interação com a página até ser fechada.</label>
+                <label onclick="selectOption(3, 'D')" class="option">D. Obter a confirmação do usuário para uma ação.</label>
+            </div>
+            <button onclick="nextQuestion()">Responder</button>
+            <button onclick="skipQuestion()">Pular</button>
+            <button onclick="prevQuestion(2)">Voltar</button>
+            <button onclick="showHint('Lembre-se do uso desta função.')" class="help-button">Ajuda</button>
+        </div>
+
+        <div class="question" id="question4" style="display: none;">
+            <h1>Qual é o comando para exibir um alerta em Javascript?</h1>
+            <input type="text" id="answer4" placeholder="Digite sua resposta" class="styled-input">
+            <button onclick="submitQuiz()">Responder</button>
+            <button onclick="skipQuestion()">Pular</button>
+            <button onclick="prevQuestion(3)">Voltar</button>
+            <button onclick="showHint('Lembre-se do que falamos a lição inteira.')" class="help-button">Ajuda</button>
+        </div>
+    </div>
+
+    <!-- Alertas -->
+    <div id="customAlert" class="alert-box" style="display: none;">
+        <div class="alert-content">
+            <span id="alertText"></span><br>
+            <button onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
+    <!-- Tela final -->
+    <div id="result-container" style="display: none;" class="result-container">
+        <h2 class="result-title">Resultados</h2>
+        <p class="score-display" id="result-summary"></p>
+        <button class="restart-button" id="restart-button" onclick="restartQuiz()">Recomeçar</button>
+        <button id="finish-button" style="display: none;" onclick="finishQuiz()">Finalizar</button>
+    </div>
+
+    <!-- GIF de celebração -->
+    <div id="celebration-gif" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;">
+        <img src="../img/congratulations.gif" alt="Celebração" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+
+    <!-- Áudios -->
+    <audio id="correct-sound" src="../audio/Correct_Sound.mp3" preload="auto"></audio>
+    <audio id="incorrect-sound" src="../audio/Incorrect_sound.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="../audio/Test_win.mp3" preload="auto"></audio>
+    <audio id="fail-sound" src="../audio/Test_fail.mp3" preload="auto"></audio>
+
+
+    <script src="../js_lessons/lesson3.js"></script>
+     <!-- Modal -->
+    <div id="meuModal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="fecharModal()">&times;</span>
+          <p id="significadoTexto"></p>
+      </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugCode</title>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/Lesson.css">
+    <link href="../Font.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+</head>
+
+<body>
+    <!--Home -->
+    <div class="container-home">
+        <a href="../menu.html"><img src="../img/logo.png" /></a>
+    </div>
+
+    <!-- Vidas -->
+    <div id="lives-container" style="position: absolute; top: 10px; left: 10px; display: flex; align-items: center;">
+        <img id="heart-icon" src="../img/coracao.png" alt="Coração" style="width: 30px; height: 30px;">
+        <span id="lives-count" style="font-size: 24px; margin-left: 5px; font-family: 'Minecraft', sans-serif;color:black;">3</span>
+    </div>
+
+    <!-- Container intro 1 -->
+    <div class="intro-container">
+        <h1>Bem-vindo à segunda atividade do módulo 1 de Javascript!</h1>
+        <p>Vamos aprender juntos!</p>
+        <button onclick="startQuiz()">Começar</button>
+    </div>
+
+    <!-- Container de informações -->
+    <div class="container" style="display: none;">
+        <div class="info-box" id="info1">
+            <h2>Importância de um código limpo</h2>
+            <p>O famoso "cleancode" é essencial para um bom código JavaScript, com isso, é sempre importante manter uma boa organização com seus códigos.</p>
+            <img src="../img/Print_cleancode.png">
+            <button onclick="showInfo(2)">Próxima</button>
+        </div>
+
+        <div class="info-box" id="info2" style="display: none;">
+            <h2>Como fazer um cleancode?</h2>
+            <p>Cleancode é uma boa prática da programação de priorizar a estrutura
+              e o bom uso do código, deixando o de forma limpa e compreensiva, definindo nomes realista de <span onclick="mostrarSignificado(this)">variáveis</span> 
+              <data data-significado="Uma variável é um espaço na memória do computador que armazena dados ou informações de um programa. As variáveis são compostas por um nome, um tipo e um conteúdo. É um tópico que visitaremos mais a frente. "></data>
+              e sempre comentando o código.</p>
+            <button onclick="showInfo(3)">Próxima</button>
+        </div>
+
+        <div class="info-box" id="info3" style="display: none;">
+            <h2>Comentários</h2>
+            <p>Uma forma fácil de organizar o código é comentando ele, desde a sintaxe a funções específicas, comentários não alteram nada no código e são "invisiveis" ao executar, existem vários tipos de comentários. </p>
+            <button onclick="showInfo(4)">Próxima</button>
+        </div>
+
+        <div class="info-box" id="info4" style="display: none;">
+            <h2>Tipos de comentários</h2>
+            <p>No JavaScript existem dois tipos de comentários, de linhas únicas, e os que são ilimitados. Eles respectivamente são "//" e o "/* */".</p>
+            <div class="terminal">
+                <div class="header">
+                  <span class="circle red"></span>
+                  <span class="circle yellow"></span>
+                  <span class="circle green"></span>
+                  <span class="title">Script.js</span>
+                </div>
+                <div class="content">
+                  <p>/* Aula 02 de JS */</p>
+                  <p>// Aula 02 de JS</p>
+                  <p>/* <br>Aula 02 de JS<br> */</p>
+                </div>
+              </div>
+            <button onclick="showQuestion(1)">Próximo</button>
+        </div>
+
+        <!-- Barra de progresso -->
+        <div class="progress-bar" id="progress-bar" style="display: none;">
+            <div id="progress" class="progress"></div>
+        </div>
+
+        <!-- Questões -->
+        <div class="question" id="question1" style="display: none;">
+            <h1>Marque a alternativa em que não tem um termo referente a cleancode.</h1>
+            <div class="options">
+                <label onclick="selectOption(1, 'A')" class="option">A. Criação de variáveis com nomes aleatórios.</label>
+                <label onclick="selectOption(1, 'B')" class="option">B. Criação de variáveis com nomes coesos.</label>
+                <label onclick="selectOption(1, 'C')" class="option">C. Um código limpo e bem formatado.</label>
+                <label onclick="selectOption(1, 'D')" class="option">D. Foco na legibilidade do código.</label>
+            </div>
+            <button onclick="nextQuestion()">Responder</button>
+            <button onclick="skipQuestion()">Pular</button>
+            <button onclick="showHint('Lembre-se, os conceitos do Cleancode é a eficiência e simplicidade.')" class="help-button">Ajuda</button>
+        </div>
+
+        <div class="question" id="question2" style="display: none;">
+            <h1>Marque a alternativa correta.</h1>
+            <div class="options">
+                <label onclick="selectOption(2, 'A')" class="option">A. Comentários são como variáveis.</label>
+                <label onclick="selectOption(2, 'B')" class="option">B. Comentários são desnecessários nos códigos.</label>
+                <label onclick="selectOption(2, 'C')" class="option">C. Comentários são invisiveis na execução do código.</label>
+                <label onclick="selectOption(2, 'D')" class="option">D. Comentários são tratados como diferentes na execução do código, ficando em uma área específica.</label>
+            </div>
+            <button onclick="nextQuestion()">Responder</button>
+            <button onclick="skipQuestion()">Pular</button>
+            <button onclick="prevQuestion(1)">Voltar</button>
+            <button onclick="showHint('Pense em como as páginas respondem ao que o usuário faz.')" class="help-button">Ajuda</button>
+        </div>
+
+        <div class="question" id="question3" style="display: none;">
+            <h1>Marque a alternativa que apresenta as duas únicas formas para comentar um código em JavaScript.</h1>
+            <div class="options">
+                <label onclick="selectOption(3, 'A')" class="option">A. -- e #.</label>
+                <label onclick="selectOption(3, 'B')" class="option">B. /* e #.</label>
+                <label onclick="selectOption(3, 'C')" class="option">C. // e #.</label>
+                <label onclick="selectOption(3, 'D')" class="option">D. // e /*.</label>
+            </div>
+            <button onclick="nextQuestion()">Responder</button>
+            <button onclick="skipQuestion()">Pular</button>
+            <button onclick="prevQuestion(2)">Voltar</button>
+            <button onclick="showHint('Lembre-se do terminal de exemplo mostrado anteriormente.')" class="help-button">Ajuda</button>
+        </div>
+
+        <div class="question" id="question4" style="display: none;">
+            <h1>Qual é o comando para comentar uma única linha em Javascript?</h1>
+            <input type="text" id="answer4" placeholder="Digite sua resposta" class="styled-input">
+            <button onclick="submitQuiz()">Responder</button>
+            <button onclick="skipQuestion()">Pular</button>
+            <button onclick="prevQuestion(3)">Voltar</button>
+            <button onclick="showHint('Lembre-se que o comando tem os 2 símbolos iguais.')" class="help-button">Ajuda</button>
+        </div>
+    </div>
+
+    <!-- Alertas -->
+    <div id="customAlert" class="alert-box" style="display: none;">
+        <div class="alert-content">
+            <span id="alertText"></span><br>
+            <button onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
+    <!-- Tela final -->
+    <div id="result-container" style="display: none;" class="result-container">
+        <h2 class="result-title">Resultados</h2>
+        <p class="score-display" id="result-summary"></p>
+        <button class="restart-button" id="restart-button" onclick="restartQuiz()">Recomeçar</button>
+        <button id="finish-button" style="display: none;" onclick="finishQuiz()">Finalizar</button>
+    </div>
+
+    <!-- GIF de celebração -->
+    <div id="celebration-gif" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;">
+        <img src="../img/congratulations.gif" alt="Celebração" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+
+    <!-- Áudios -->
+    <audio id="correct-sound" src="../audio/Correct_Sound.mp3" preload="auto"></audio>
+    <script src="../js_lessons/lesson2.js"></script>
+     <!-- Modal -->
+    <div id="meuModal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="fecharModal()">&times;</span>
+          <p id="significadoTexto"></p>
+      </div>
+  </div>
+</body>
+</html>

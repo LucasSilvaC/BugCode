@@ -1,0 +1,157 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.info-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px auto;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  max-width: 80%;
+  text-align: center;
+}
+
+.word {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.letter,
+.blank {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.option {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 24px;
+  background-color: #9370DB;
+  color: white;
+  border-radius: 5px;
+  cursor: grab;
+  user-select: none;
+}
+
+.option:active {
+  cursor: grabbing;
+}
+
+.correct {
+  color: #9370DB;
+  font-weight: bold;
+}
+
+#result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+button {
+  background-color: #9370DB;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 5px;
+  font-family: "DIN Next Rounded LT W01 Regular";
+  margin-right: 20px;
+  width: 40%;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ffffff;
+  border: 2px solid #9370DB;
+  color: #9370DB;
+}
+
+h2 {
+  font: 700 2rem/2.625rem "Feather bold", sans-serif;
+  text-transform: uppercase;
+}
+
+
+.container-home img {
+  width: 80%;
+}
+
+span{
+  font-family: "DIN Next Rounded LT W01 Regular";
+}
+
+/* Estilo de Ajuda */
+.help-button {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+.help-button:hover {
+  color: #f0ad4e;
+  border: 2px solid #f0ad4e;
+}
+
+/* Caixa de alerta personalizada */
+.alert-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-size: 25px;
+}
+
+.alert-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.alert-content button {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+.alert-content button:hover {
+  background-color: white;
+  color: #f0ad4e;
+  border: 2px solid #f0ad4e;
+}
+
+@media (max-width: 480px) {
+}

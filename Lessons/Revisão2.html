@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BugCode</title>
+  <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/revisao.css">
+  <link href="../Font.css" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-home">
+    <a href="../menu.html"><img src="../img/logo.png" /></a>
+  </div>
+
+  <!-- Questões -->
+  <div class="info-box">
+    <h2 id="question-title">Complete as palavras de acordo com o que aprendemos:</h2>
+
+    <!-- Container dos desafios -->
+    <div id="challenges">
+      <div class="challenge active" data-word="clean-code">
+        <div class="word">
+          <span class="letter">C</span>
+          <span class="blank" data-correct="O"></span>
+          <span class="letter">N</span>
+          <span class="blank" data-correct="D"></span>
+          <span class="letter">I</span>
+          <span class="blank" data-correct="C"></span>
+          <span class="letter">I</span>
+          <span class="blank" data-correct="O"></span>
+          <span class="letter">N</span>
+          <span class="blank" data-correct="A"></span>
+          <span class="letter">L</span>
+        </div>
+      </div>
+
+      <div class="challenge" data-word="javascript">
+        <div class="word">
+          <span class="blank" data-correct="T"></span>
+          <span class="blank" data-correct="I"></span>
+          <span class="letter">P</span>
+          <span class="letter">A</span>
+          <span class="letter">G</span>
+          <span class="blank" data-correct="E"></span>
+          <span class="blank" data-correct="M"></span>
+        </div>
+      </div>
+
+      <div class="challenge" data-word="fudum">
+        <div class="word">
+          <span class="letter">R</span>
+          <span class="blank" data-correct="E"></span>
+          <span class="letter">P</span>
+          <span class="blank" data-correct="E"></span>
+          <span class="letter">T</span>
+          <span class="letter">I</span>
+          <span class="blank" data-correct="Ç"></span>
+          <span class="blank" data-correct="Ã"></span>
+          <span class="letter">O</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="options">
+      <div class="option" draggable="true">D</div>
+      <div class="option" draggable="true">E</div>
+      <div class="option" draggable="true">C</div>
+      <div class="option" draggable="true">O</div>
+      <div class="option" draggable="true">E</div>
+      <div class="option" draggable="true">E</div>
+      <div class="option" draggable="true">M</div>
+      <div class="option" draggable="true">Ã</div>
+      <div class="option" draggable="true">I</div>
+      <div class="option" draggable="true">Ç</div>
+      <div class="option" draggable="true">O</div>
+      <div class="option" draggable="true">A</div>
+      <div class="option" draggable="true">T</div>
+    </div>
+
+    <button id="check-button" onclick="checkAnswer()">Verificar</button>
+    <button onclick="clearBlanks()">Apagar</button>
+    <button onclick="showHint('Lembre-se do termo referente aos Ifs sobre tipagem e laços de...')"
+      class="help-button">Ajuda</button>
+    <div id="result"></div>
+  </div>
+
+  <!-- Alertas -->
+  <div id="customAlert" class="alert-box" style="display: none;">
+    <div class="alert-content">
+      <span id="alertText"></span><br>
+      <button onclick="closeAlert()">OK</button>
+    </div>
+  </div>
+
+  <!-- Áudios -->
+  <audio id="win-sound" src="../audio/Test_win.mp3" preload="auto"></audio>
+
+  <script src="../js_lessons/revisao.js"></script>
+</body>
+
+</html>
