@@ -11,9 +11,10 @@ Programming can be fun! With BugCode you can learn programming in just 5 minutes
 <img  src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/vscode/vscode-original.svg" alt="VSCode" width="50" height="50"/> &nbsp;
 <img  src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-plain.svg" alt="HTML5" width="50" height="50"/> &nbsp;
 <img  src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-original.svg" alt="CSS3" width="50" height="50"/>&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL" width="50" height="50"/>&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" width="50" height="50"/>&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="NodeJs" width="50" height="50"/>
           
-            
+
 &nbsp;
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=LucasSilvaC&repo=BugCode&bg_color=0d1116&title_color=ce09ec&text_color=a4aacb&icon_color=007ec6)](https://github.com/LucasSilvaC/BugCode) &nbsp;
@@ -21,8 +22,8 @@ Programming can be fun! With BugCode you can learn programming in just 5 minutes
 &nbsp;
 
 ## 📊 &nbsp;Status
-90%  Loading...
+98%  Loading...
 
 ## &nbsp;CheckList
 1. Responsividade revisões
-2. Vídeo
+2. Sobre nós
