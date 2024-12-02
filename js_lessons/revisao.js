@@ -66,14 +66,6 @@ function checkAnswer() {
   }
 }
 
-function clearBlanks() {
-  blanks.forEach(blank => {
-    if (!blank.classList.contains("correct")) {
-      blank.textContent = "";
-    }
-  });
-}
-
 // Função para mostrar alertas personalizados
 function showAlert(message, isError = false) {
   const alertBox = document.getElementById('customAlert');
