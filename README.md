@@ -22,8 +22,7 @@ Programming can be fun! With BugCode you can learn programming in just 5 minutes
 &nbsp;
 
 ## 📊 &nbsp;Status
-98%  Loading...
+100%✅
 
 ## &nbsp;CheckList
-1. Responsividade revisões
-2. Sobre nós
+...
