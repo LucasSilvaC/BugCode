@@ -25,4 +25,3 @@ Programming can be fun! With BugCode you can learn programming in just 5 minutes
 100%✅
 
 ## &nbsp;CheckList
-1. Imagens Login
