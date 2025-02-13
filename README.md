@@ -1,5 +1,5 @@
-# Bugcode
-# 👋 &nbsp;Hi!
+# 👋 &nbsp;Hi there
+# BugCode - TCC for Etec
 
 Programming can be fun! With BugCode you can learn programming in just 5 minutes a day.
 
@@ -17,11 +17,10 @@ Programming can be fun! With BugCode you can learn programming in just 5 minutes
               
 &nbsp;
 
+## 🖥 &nbsp;Repository
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=LucasSilvaC&repo=BugCode&bg_color=0d1116&title_color=ce09ec&text_color=a4aacb&icon_color=007ec6)](https://github.com/LucasSilvaC/BugCode) &nbsp;
-
+        
 &nbsp;
 
 ## 📊 &nbsp;Status
 100%✅
-
-## &nbsp;CheckList
